@@ -1,0 +1,57 @@
+Creating your own clickable muscle group selector is best achieved by using SVG (Scalable Vector Graphics) to map out the body, combined with HTML, CSS, and JavaScript to handle the interactivity. SVG is preferred because it allows individual muscles to be colored, labeled, and clicked, and it scales perfectly on mobile and desktop. 
+Here is a step-by-step guide to building your own:
+1. Create the Anatomy SVG 
+Obtain a Diagram: Use a vector tool like Figma, Inkscape, or Adobe Illustrator to create or open an image of the human musculature.
+Create Individual Paths: In your vector tool, outline each muscle group (e.g., chest, shoulders, biceps) as a distinct "path" or object.
+Assign Classes/IDs: Name each path in your vector tool (e.g., id="biceps", class="muscle").
+Export as SVG: Save the file as an .svg file. 
+2. Embed the SVG in HTML
+Embed directly: Instead of using an <img> tag, paste the SVG code directly into your HTML file. This allows JavaScript to manipulate the individual paths.
+Structure:
+html
+<svg>
+  <path class="muscle" id="pectorals" d="..." />
+  <path class="muscle" id="biceps" d="..." />
+  <!-- Add all other muscle paths -->
+</svg>
+<div id="exercise-list"></div>
+ 
+3. Add CSS for Styling 
+Initial State: Set a default color for the muscles.
+Hover Effect: Add a :hover state to highlight the muscle when the mouse moves over it.
+Active State: Define a CSS class (e.g., .active) to change the color of a selected muscle. 
+css
+.muscle {
+  fill: #ccc; /* Default color */
+  stroke: #fff;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+.muscle:hover {
+  fill: #aaa; /* Hover color */
+}
+.muscle.active {
+  fill: #ff4500; /* Selected color */
+}
+4. Add Interactivity with JavaScript 
+Event Listeners: Add a click event listener to each muscle path.
+Toggle Selection: When a muscle is clicked, remove the .active class from others and add it to the clicked one, or allow multi-selection.
+Display Information: Use the clicked element's ID to display related information (e.g., exercises for that muscle). 
+javascript
+document.querySelectorAll('.muscle').forEach(muscle => {
+  muscle.addEventListener('click', function() {
+    // Remove active class from previous selections
+    document.querySelector('.muscle.active')?.classList.remove('active');
+    
+    // Add active class to clicked muscle
+    this.classList.add('active');
+    
+    // Log selected muscle
+    console.log(this.id + " selected");
+    // [Insert function to filter exercises here]
+  });
+});
+5. Alternative Options
+Ready-Made Templates: You can purchase or download pre-made interactive SVG muscle maps (front/back, male/female) which include 20+ clickable muscles, reducing the design time.
+No-Code Tools: Use no-code app builders like BuildFire to create a fitness app with pre-built components.
+Image Maps: For simpler, non-responsive applications, you can use HTML image maps, though they do not work well on mobile. 

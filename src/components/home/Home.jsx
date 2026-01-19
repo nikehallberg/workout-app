@@ -1,11 +1,11 @@
 import "./Home.css"
 
-const HomePage = () => {
+const Home = () => {
   return (
     <div>
-      
+      gyhuijoi
     </div>
   );
 };
 
-export default HomePage;
+export default Home;
