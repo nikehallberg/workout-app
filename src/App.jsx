@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import Navbar from './navBar/Navbar'
+import Navbar from './components/navBar/Navbar'
 import './App.css'
+import { Route, Routes } from "react-router";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div>
       <Navbar />
-      <div className="main-content">
-        <h1>Welcome to Your Workout App</h1>
-        <div className="card">
-        </div>
+       <Routes>
+        <Route path="/"/>
+        <Route path="/workouts"/>
+        <Route path="/about"/>
+        <Route path="/profile"/>
+      </Routes>
       </div>
-    </>
   )
 }
 
