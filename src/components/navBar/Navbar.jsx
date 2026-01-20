@@ -17,7 +17,6 @@ const Navbar = () => {
         <div className="navbar-logo">
           <img src={logo1} alt="Workout App Logo" className="logo" />
         </div>
-        // ...existing code...
         <ul className="navbar-menu">
           <li className="navbar-item">
             <Link to="/" className="navbar-link">
