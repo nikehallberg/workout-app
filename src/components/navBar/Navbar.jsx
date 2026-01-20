@@ -17,6 +17,7 @@ const Navbar = () => {
         <div className="navbar-logo">
           <img src={logo1} alt="Workout App Logo" className="logo" />
         </div>
+        // ...existing code...
         <ul className="navbar-menu">
           <li className="navbar-item">
             <Link to="/" className="navbar-link">
@@ -27,6 +28,13 @@ const Navbar = () => {
             <Link to="/workouts" className="navbar-link" onClick={toggleWorkoutNav}>
             Workouts
             </Link>
+            {showWorkoutNav && (
+              <ul className="workout-nav">
+                <li>Workouts</li>
+                <li>Build your workout</li>
+                <li>Specific needs</li>
+              </ul>
+            )}
           </li>
           <li className="navbar-item">
             <Link to="/about" className="navbar-link">
@@ -37,17 +45,6 @@ const Navbar = () => {
             <Link to="/profile" className="navbar-link">
             Profile
             </Link>
-          </li>
-        </ul>
-        <ul className="workout-nav" hidden={!showWorkoutNav} >
-          <li>
-            Workouts
-          </li>
-          <li>
-            Build your workout
-          </li>
-          <li>
-            Specific needs
           </li>
         </ul>
       </div>

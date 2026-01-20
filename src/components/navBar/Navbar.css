@@ -15,6 +15,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative; 
 }
 
 .navbar-logo {
@@ -37,6 +38,7 @@
 
 .navbar-item {
   margin: 0;
+  position: relative;
 }
 
 .navbar-link {
@@ -51,6 +53,32 @@
 
 .navbar-link:hover {
   color: #007bff;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.workout-nav {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #2b2b2c;
+  border: 1px solid #444;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  min-width: 150px;
+  z-index: 1001;
+}
+
+.workout-nav li {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.workout-nav li:hover {
   background-color: rgba(255,255,255,0.1);
 }
 
