@@ -1,6 +1,9 @@
 import Navbar from './components/navBar/Navbar'
 import Workouts from './components/workouts/Workouts'
 import Nutrition from './components/nutrition/Nutrition'
+import MealPlans from './components/mealPlans/MealPlans'
+import CalorieTracker from './components/calorieTracker/CalorieTracker'
+import NutritionTips from './components/nutritionTips/NutritionTips'
 import About from './components/about/About'
 import Profile from './components/profile/Profile'
 import Home from './components/home/Home'
@@ -16,6 +19,9 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/workouts" element={<Workouts />}/>
           <Route path="/nutrition" element={<Nutrition />}/>
+          <Route path="/meal-plans" element={<MealPlans />}/>
+          <Route path="/calorie-tracker" element={<CalorieTracker />}/>
+          <Route path="/nutrition-tips" element={<NutritionTips />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/profile" element={<Profile />}/>
         </Routes>

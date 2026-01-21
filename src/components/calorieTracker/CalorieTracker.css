@@ -1,0 +1,20 @@
+.calorie-tracker-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.calorie-tracker-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.calorie-tracker-container p {
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.6;
+}
