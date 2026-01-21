@@ -2,8 +2,8 @@ import "./Home.css"
 
 const Home = () => {
   return (
-    <div>
-      gyhuijoi
+    <div className="home-container">
+    gyhuijoi
     </div>
   );
 };
