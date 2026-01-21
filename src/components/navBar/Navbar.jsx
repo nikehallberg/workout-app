@@ -1,15 +1,28 @@
 import "./Navbar.css"
 import logo1 from "../../assets/workoutapplogo.png"
 // import logo2 from "./assets/workoutapplogo2.png"
-import { Link } from "react-router"
-import { useState } from "react";
+import { Link } from "react-router-dom"
+import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
   const [showWorkoutNav, setShowWorkoutNav] = useState(false)
+  const dropdownRef = useRef(null)
 
   const toggleWorkoutNav = () => {
     setShowWorkoutNav(!showWorkoutNav)
   }
+  
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowWorkoutNav(false);
+      }
+    }
+    if (showWorkoutNav) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showWorkoutNav]);
   
   return (
     <nav className="navbar">
@@ -23,8 +36,12 @@ const Navbar = () => {
             Home
             </Link>
           </li>
-          <li className="navbar-item">
-            <Link to="/workouts" className="navbar-link" onClick={toggleWorkoutNav}>
+          <li className="navbar-item" ref={dropdownRef}>
+            <Link 
+              to="/workouts" 
+              className="navbar-link" 
+              onClick={toggleWorkoutNav}
+            >
             Workouts
             </Link>
             {showWorkoutNav && (

@@ -55,3 +55,21 @@ document.querySelectorAll('.muscle').forEach(muscle => {
 Ready-Made Templates: You can purchase or download pre-made interactive SVG muscle maps (front/back, male/female) which include 20+ clickable muscles, reducing the design time.
 No-Code Tools: Use no-code app builders like BuildFire to create a fitness app with pre-built components.
 Image Maps: For simpler, non-responsive applications, you can use HTML image maps, though they do not work well on mobile. 
+
+
+
+
+
+
+
+
+
+
+
+
+useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowWorkoutNav(false);
+      }
+    }
