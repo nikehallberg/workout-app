@@ -8,21 +8,37 @@ const Navbar = () => {
   const [showWorkoutNav, setShowWorkoutNav] = useState(false)
   const dropdownRef = useRef(null)
 
-  const toggleWorkoutNav = () => {
-    setShowWorkoutNav(!showWorkoutNav)
+  // click dropdown
+  // const toggleWorkoutNav = () => {
+  //   setShowWorkoutNav(!showWorkoutNav)
+  // }
+
+  // hover dropdown
+  const handleMouseEnter = () => {
+    setShowWorkoutNav(true)
   }
-  
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowWorkoutNav(false);
-      }
-    }
-    if (showWorkoutNav) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [showWorkoutNav]);
+
+  const handleMouseLeave = () => {
+    setShowWorkoutNav(false)
+  }
+
+  const handleDropdownClick = () => {
+    setShowWorkoutNav(false);
+  };
+
+  // click dropdown extra logic
+  // useEffect(() => {
+  //   function handleClickOutside(event) {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setShowWorkoutNav(false);
+  //     }
+  //   }
+  //   if (showWorkoutNav) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   }
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, [showWorkoutNav]);
+
   
   return (
     <nav className="navbar">
@@ -36,19 +52,31 @@ const Navbar = () => {
             Home
             </Link>
           </li>
-          <li className="navbar-item" ref={dropdownRef}>
+          <li className="navbar-item" ref={dropdownRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link 
               to="/workouts" 
-              className="navbar-link" 
-              onClick={toggleWorkoutNav}
+              className="navbar-link"
+              // onClick={toggleWorkoutNav} 
             >
             Workouts
             </Link>
             {showWorkoutNav && (
               <ul className="workout-nav">
-                <li>Workouts</li>
-                <li>Build your workout</li>
-                <li>Specific needs</li>
+                <li>
+                  <Link to="/workouts" className="dropdown-link" onClick={handleDropdownClick}>
+                    Workouts
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/build-workout" className="dropdown-link" onClick={handleDropdownClick}>
+                    Build your workout
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/specific-needs" className="dropdown-link" onClick={handleDropdownClick}>
+                    Specific needs
+                  </Link>
+                </li>
               </ul>
             )}
           </li>
