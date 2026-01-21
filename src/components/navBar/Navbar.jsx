@@ -6,7 +6,11 @@ import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
   const [showWorkoutNav, setShowWorkoutNav] = useState(false)
+  const [showNutritionNav, setShowNutritionNav] = useState(false)
+  const [showHomeNav, setShowHomeNav] = useState(false)
   const dropdownRef = useRef(null)
+  const nutritionDropdownRef = useRef(null)
+  const homeDropdownRef = useRef(null)
 
   // click dropdown
   // const toggleWorkoutNav = () => {
@@ -24,6 +28,32 @@ const Navbar = () => {
 
   const handleDropdownClick = () => {
     setShowWorkoutNav(false);
+  };
+
+  // Nutrition dropdown handlers
+  const handleNutritionMouseEnter = () => {
+    setShowNutritionNav(true)
+  }
+
+  const handleNutritionMouseLeave = () => {
+    setShowNutritionNav(false)
+  }
+
+  const handleNutritionDropdownClick = () => {
+    setShowNutritionNav(false);
+  };
+
+  // Home dropdown handlers
+  const handleHomeMouseEnter = () => {
+    setShowHomeNav(true)
+  }
+
+  const handleHomeMouseLeave = () => {
+    setShowHomeNav(false)
+  }
+
+  const handleHomeDropdownClick = () => {
+    setShowHomeNav(false);
   };
 
   // click dropdown extra logic
@@ -47,10 +77,19 @@ const Navbar = () => {
           <img src={logo1} alt="Workout App Logo" className="logo" />
         </div>
         <ul className="navbar-menu">
-          <li className="navbar-item">
+          <li className="navbar-item" ref={homeDropdownRef} onMouseEnter={handleHomeMouseEnter} onMouseLeave={handleHomeMouseLeave}>
             <Link to="/" className="navbar-link">
             Home
             </Link>
+            {showHomeNav && (
+              <ul className="workout-nav">
+                <li>
+                  <Link to="/about" className="dropdown-link" onClick={handleHomeDropdownClick}>
+                    About
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li className="navbar-item" ref={dropdownRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link 
@@ -80,10 +119,34 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <li className="navbar-item">
-            <Link to="/about" className="navbar-link">
-            About
+          <li className="navbar-item" ref={nutritionDropdownRef} onMouseEnter={handleNutritionMouseEnter} onMouseLeave={handleNutritionMouseLeave}>
+            <Link to="/nutrition" className="navbar-link">
+            Nutrition
             </Link>
+            {showNutritionNav && (
+              <ul className="workout-nav">
+                <li>
+                  <Link to="/nutrition" className="dropdown-link" onClick={handleNutritionDropdownClick}>
+                    Nutrition Overview
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/meal-plans" className="dropdown-link" onClick={handleNutritionDropdownClick}>
+                    Meal Plans
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/calorie-tracker" className="dropdown-link" onClick={handleNutritionDropdownClick}>
+                    Calorie Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/nutrition-tips" className="dropdown-link" onClick={handleNutritionDropdownClick}>
+                    Nutrition Tips
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li className="navbar-item">
             <Link to="/profile" className="navbar-link">

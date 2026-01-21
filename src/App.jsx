@@ -1,5 +1,6 @@
 import Navbar from './components/navBar/Navbar'
 import Workouts from './components/workouts/Workouts'
+import Nutrition from './components/nutrition/Nutrition'
 import About from './components/about/About'
 import Profile from './components/profile/Profile'
 import Home from './components/home/Home'
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/workouts" element={<Workouts />}/>
+          <Route path="/nutrition" element={<Nutrition />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/profile" element={<Profile />}/>
         </Routes>
