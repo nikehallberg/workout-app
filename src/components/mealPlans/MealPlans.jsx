@@ -1,4 +1,3 @@
-import React from 'react'
 import './MealPlans.css'
 
 const MealPlans = () => {

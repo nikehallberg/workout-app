@@ -1,4 +1,3 @@
-import React from 'react'
 import './CalorieTracker.css'
 
 const CalorieTracker = () => {
