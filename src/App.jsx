@@ -7,7 +7,14 @@ import NutritionTips from './components/nutritionTips/NutritionTips'
 import About from './components/about/About'
 import Profile from './components/profile/Profile'
 import Home from './components/home/Home'
+import StrengthTraining from './components/strengthTraining/StrengthTraining'
+import CardioWorkouts from './components/cardioWorkouts/CardioWorkouts'
+import YogaFlexibility from './components/yogaFlexibility/YogaFlexibility'
+import WorkoutPlans from './components/workoutPlans/WorkoutPlans'
+import ExerciseLibrary from './components/exerciseLibrary/ExerciseLibrary'
+import ProgressTracker from './components/progressTracker/ProgressTracker'
 import './App.css'
+import './components/sharedLogic/shared.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -24,6 +31,12 @@ function App() {
           <Route path="/nutrition-tips" element={<NutritionTips />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/profile" element={<Profile />}/>
+          <Route path="/strength-training" element={<StrengthTraining />}/>
+          <Route path="/cardio-workouts" element={<CardioWorkouts />}/>
+          <Route path="/yoga-flexibility" element={<YogaFlexibility />}/>
+          <Route path="/workout-plans" element={<WorkoutPlans />}/>
+          <Route path="/exercise-library" element={<ExerciseLibrary />}/>
+          <Route path="/progress-tracker" element={<ProgressTracker />}/>
         </Routes>
       </div>
     </Router>

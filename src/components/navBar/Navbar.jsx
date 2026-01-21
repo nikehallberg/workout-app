@@ -116,6 +116,36 @@ const Navbar = () => {
                     Specific needs
                   </Link>
                 </li>
+                <li>
+                  <Link to="/strength-training" className="dropdown-link" onClick={handleDropdownClick}>
+                    Strength Training
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cardio-workouts" className="dropdown-link" onClick={handleDropdownClick}>
+                    Cardio Workouts
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/yoga-flexibility" className="dropdown-link" onClick={handleDropdownClick}>
+                    Yoga & Flexibility
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/workout-plans" className="dropdown-link" onClick={handleDropdownClick}>
+                    Workout Plans
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/exercise-library" className="dropdown-link" onClick={handleDropdownClick}>
+                    Exercise Library
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/progress-tracker" className="dropdown-link" onClick={handleDropdownClick}>
+                    Progress Tracker
+                  </Link>
+                </li>
               </ul>
             )}
           </li>
