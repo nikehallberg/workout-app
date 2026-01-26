@@ -5,7 +5,6 @@
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 160px);
-  margin-top: 70px;
 }
 
 .build-workout-container h1 {
@@ -45,9 +44,11 @@
 }
 
 .workout-builder h2 {
-  color: #333;
+  color: #34495e;
   margin-bottom: 25px;
   font-size: 2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
 }
 
 .builder-section {
@@ -61,13 +62,13 @@
 }
 
 .builder-section h3 {
-  color: #333;
+  color: #2c3e50;
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
 
 .builder-section p {
-  color: #666;
+  color: #555;
   margin-bottom: 15px;
 }
 
@@ -78,23 +79,23 @@
 }
 
 .goal-btn, .duration-btn, .level-btn {
-  background: #007bff;
+  background: #3498db;
   color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .goal-btn:hover, .duration-btn:hover, .level-btn:hover {
-  background: #0056b3;
+  background: #2980b9;
   transform: translateY(-2px);
 }
 
 .goal-btn.active, .duration-btn.active, .level-btn.active {
-  background: #28a745;
+  background: #27ae60;
 }
 
 .equipment-options {
@@ -115,18 +116,18 @@
 }
 
 .equipment-item:hover {
-  border-color: #007bff;
+  border-color: #3498db;
   background: #f8f9fa;
 }
 
 .equipment-item input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #007bff;
+  accent-color: #3498db;
 }
 
 .equipment-item span {
-  color: #333;
+  color: #2c3e50;
   font-weight: 500;
 }
 
@@ -136,7 +137,7 @@
 }
 
 .generate-workout-btn {
-  background: #28a745;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
   color: white;
   border: none;
   padding: 15px 40px;
@@ -148,9 +149,9 @@
 }
 
 .generate-workout-btn:hover {
-  background: #218838;
+  background: linear-gradient(135deg, #229954, #27ae60);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
 }
 
 .workout-preview {
@@ -161,7 +162,7 @@
 }
 
 .workout-preview h2 {
-  color: #333;
+  color: #2c3e50;
   margin-bottom: 15px;
   font-size: 2rem;
 }

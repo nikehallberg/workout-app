@@ -1,4 +1,6 @@
 
+import "./StrengthTraining.css"
+
 const StrengthTraining = () => {
   return (
     <div className="strength-training-container">

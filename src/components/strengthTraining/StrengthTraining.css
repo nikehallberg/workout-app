@@ -1,29 +1,13 @@
-/* YogaFlexibility component styles - inherits from shared.css */
+/* StrengthTraining component styles - inherits from shared.css */
 
-.yoga-flexibility-container {
+.strength-training-container {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 160px);
 }
 
-.yoga-flexibility-container h1 {
-  color: #2c3e50;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.yoga-flexibility-container > p {
-  text-align: center;
-  color: #7f8c8d;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.yoga-styles, .flexibility-training, .mindfulness {
+.training-types, .workout-programs {
   background: white;
   border-radius: 8px;
   padding: 30px;
@@ -31,7 +15,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.yoga-styles h2, .flexibility-training h2, .mindfulness h2 {
+.training-types h2, .workout-programs h2 {
   color: #34495e;
   margin-bottom: 25px;
   font-size: 2rem;
@@ -63,37 +47,22 @@
   margin: 0;
 }
 
-.flexibility-training > p, .mindfulness > p {
+.workout-programs > p {
   color: #555;
   line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.mindfulness {
-  text-align: center;
-}
-
-.mindfulness h2 {
   margin-bottom: 15px;
 }
 
-.mindfulness p {
-  color: #555;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  margin: 0;
+.workout-programs > p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-  .yoga-flexibility-container {
+  .strength-training-container {
     padding: 15px;
   }
   
-  .yoga-flexibility-container h1 {
-    font-size: 2rem;
-  }
-  
-  .yoga-styles, .flexibility-training, .mindfulness {
+  .training-types, .workout-programs {
     padding: 20px;
   }
   
