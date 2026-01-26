@@ -1,0 +1,197 @@
+.build-workout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 200px;
+}
+
+.build-workout-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.build-workout-container > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.workout-builder {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-builder h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.builder-section {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.builder-section:last-child {
+  border-bottom: none;
+}
+
+.builder-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.builder-section p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.goal-options, .duration-options, .level-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.goal-btn, .duration-btn, .level-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.goal-btn:hover, .duration-btn:hover, .level-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.goal-btn.active, .duration-btn.active, .level-btn.active {
+  background: #28a745;
+}
+
+.equipment-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.equipment-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.equipment-item:hover {
+  border-color: #007bff;
+  background: #f8f9fa;
+}
+
+.equipment-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+}
+
+.equipment-item span {
+  color: #333;
+  font-weight: 500;
+}
+
+.generate-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.generate-workout-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.generate-workout-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.workout-preview {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-preview h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.workout-preview > p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.workout-placeholder {
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+}
+
+.workout-placeholder p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .build-workout-container {
+    padding: 15px;
+  }
+  
+  .build-workout-container h1 {
+    font-size: 2rem;
+  }
+  
+  .workout-builder, .workout-preview {
+    padding: 20px;
+  }
+  
+  .goal-options, .duration-options, .level-options {
+    flex-direction: column;
+  }
+  
+  .goal-btn, .duration-btn, .level-btn {
+    width: 100%;
+  }
+  
+  .equipment-options {
+    grid-template-columns: 1fr;
+  }
+}

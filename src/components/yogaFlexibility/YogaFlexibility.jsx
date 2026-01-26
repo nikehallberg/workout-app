@@ -1,4 +1,6 @@
 
+import "./YogaFlexibility.css"
+
 const YogaFlexibility = () => {
   return (
     <div className="yoga-flexibility-container">

@@ -13,6 +13,7 @@ import YogaFlexibility from './components/yogaFlexibility/YogaFlexibility'
 import WorkoutPlans from './components/workoutPlans/WorkoutPlans'
 import ExerciseLibrary from './components/exerciseLibrary/ExerciseLibrary'
 import ProgressTracker from './components/progressTracker/ProgressTracker'
+import BuildWorkout from './components/buildWorkout/BuildWorkout'
 import './App.css'
 import './components/sharedLogic/shared.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -22,22 +23,25 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/workouts" element={<Workouts />}/>
-          <Route path="/nutrition" element={<Nutrition />}/>
-          <Route path="/meal-plans" element={<MealPlans />}/>
-          <Route path="/calorie-tracker" element={<CalorieTracker />}/>
-          <Route path="/nutrition-tips" element={<NutritionTips />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/profile" element={<Profile />}/>
-          <Route path="/strength-training" element={<StrengthTraining />}/>
-          <Route path="/cardio-workouts" element={<CardioWorkouts />}/>
-          <Route path="/yoga-flexibility" element={<YogaFlexibility />}/>
-          <Route path="/workout-plans" element={<WorkoutPlans />}/>
-          <Route path="/exercise-library" element={<ExerciseLibrary />}/>
-          <Route path="/progress-tracker" element={<ProgressTracker />}/>
-        </Routes>
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/workouts" element={<Workouts />}/>
+            <Route path="/nutrition" element={<Nutrition />}/>
+            <Route path="/meal-plans" element={<MealPlans />}/>
+            <Route path="/calorie-tracker" element={<CalorieTracker />}/>
+            <Route path="/nutrition-tips" element={<NutritionTips />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/profile" element={<Profile />}/>
+            <Route path="/strength-training" element={<StrengthTraining />}/>
+            <Route path="/cardio-workouts" element={<CardioWorkouts />}/>
+            <Route path="/yoga-flexibility" element={<YogaFlexibility />}/>
+            <Route path="/workout-plans" element={<WorkoutPlans />}/>
+            <Route path="/exercise-library" element={<ExerciseLibrary />}/>
+            <Route path="/progress-tracker" element={<ProgressTracker />}/>
+            <Route path="/build-workout" element={<BuildWorkout />}/>
+          </Routes>
+        </div>
       </div>
     </Router>
   )
