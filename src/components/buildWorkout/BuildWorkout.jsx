@@ -1,23 +1,16 @@
 import "./BuildWorkout.css"
+import bodyMapImage from "../../assets/bodymap.png" // Add your body map image to src/assets/
 
 const BuildWorkout = () => {
   return (
     <div className="build-workout-container">
-      <svg width="200" height="400" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="50" r="25" fill="#fdbcb4" stroke="#000" strokeWidth="2"/>
-        <rect x="75" y="75" width="50" height="80" fill="#4CAF50" stroke="#000" strokeWidth="2"/>
-        <rect x="45" y="85" width="15" height="60" fill="#fdbcb4" stroke="#000" strokeWidth="2"/>
-        <rect x="140" y="85" width="15" height="60" fill="#fdbcb4" stroke="#000" strokeWidth="2"/>
-        <rect x="85" y="155" width="15" height="80" fill="#2196F3" stroke="#000" strokeWidth="2"/>
-        <rect x="105" y="155" width="15" height="80" fill="#2196F3" stroke="#000" strokeWidth="2"/>
-        <circle cx="52" cy="155" r="8" fill="#fdbcb4" stroke="#000" strokeWidth="2"/>
-        <circle cx="148" cy="155" r="8" fill="#fdbcb4" stroke="#000" strokeWidth="2"/>
-        <ellipse cx="92" cy="245" rx="12" ry="8" fill="#000"/>
-        <ellipse cx="112" cy="245" rx="12" ry="8" fill="#000"/>
-        <circle cx="92" cy="45" r="2" fill="#000"/> 
-        <circle cx="108" cy="45" r="2" fill="#000"/> 
-        <ellipse cx="100" cy="55" rx="3" ry="2" fill="#000"/> 
-      </svg>
+      <img 
+        src={bodyMapImage} 
+        alt="Human body muscle map" 
+        className="body-map-image"
+        width="100%" 
+        height="100%"
+      />
       
       {/* <h1>Build Your Workout</h1>
       <p>Create a custom workout tailored to your specific goals and preferences.</p>

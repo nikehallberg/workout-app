@@ -5,6 +5,7 @@
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 160px);
+  margin-top: 70px;
 }
 
 .build-workout-container h1 {
@@ -21,6 +22,18 @@
   margin-bottom: 2rem;
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+/* Body map image styling */
+.body-map-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .workout-builder {
