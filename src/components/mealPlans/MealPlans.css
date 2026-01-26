@@ -1,19 +1,22 @@
+/* MealPlans component styles - inherits from shared.css */
+
 .meal-plans-container {
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 80px; /* Account for fixed navbar */
+  min-height: calc(100vh - 160px);
 }
 
 .meal-plans-container h1 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 1.5rem;
+  color: #2c3e50;
   font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .meal-plans-container p {
-  color: #666;
+  color: #7f8c8d;
   font-size: 1.1rem;
   text-align: center;
   line-height: 1.6;

@@ -14,6 +14,7 @@ import WorkoutPlans from './components/workoutPlans/WorkoutPlans'
 import ExerciseLibrary from './components/exerciseLibrary/ExerciseLibrary'
 import ProgressTracker from './components/progressTracker/ProgressTracker'
 import BuildWorkout from './components/buildWorkout/BuildWorkout'
+import SpecificNeeds from './components/specificNeeds/SpecificNeeds'
 import './App.css'
 import './components/sharedLogic/shared.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -35,6 +36,7 @@ function App() {
             <Route path="/profile" element={<Profile />}/>
             <Route path="/strength-training" element={<StrengthTraining />}/>
             <Route path="/cardio-workouts" element={<CardioWorkouts />}/>
+            <Route path="/specific-needs" element={<SpecificNeeds />}/>
             <Route path="/yoga-flexibility" element={<YogaFlexibility />}/>
             <Route path="/workout-plans" element={<WorkoutPlans />}/>
             <Route path="/exercise-library" element={<ExerciseLibrary />}/>

@@ -1,0 +1,8 @@
+/* About component styles - inherits from shared.css */
+
+.about-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 160px);
+}

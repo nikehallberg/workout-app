@@ -1,12 +1,13 @@
-/* Nutrition Tips Component Styles */
+/* NutritionTips component styles - inherits from shared.css */
 
 .nutrition-tips-container {
-  background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
-  color: #2c3e50;
-  min-height: 100vh;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: calc(100vh - 160px);
+  /* Keep the unique gradient background for this component */
+  background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+  color: #2c3e50;
 }
 
 .nutrition-tips-container h1 {

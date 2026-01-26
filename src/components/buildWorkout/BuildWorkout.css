@@ -1,24 +1,26 @@
+/* BuildWorkout component styles - inherits from shared.css */
+
 .build-workout-container {
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  margin-top: 200px;
+  min-height: calc(100vh - 160px);
 }
 
 .build-workout-container h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 10px;
+  color: #2c3e50;
   font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .build-workout-container > p {
   text-align: center;
-  color: #666;
-  margin-bottom: 30px;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
   font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .workout-builder {

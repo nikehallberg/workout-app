@@ -1,0 +1,8 @@
+/* Workouts component styles - inherits from shared.css */
+
+.workouts-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 160px);
+}
