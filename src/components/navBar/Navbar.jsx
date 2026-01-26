@@ -1,7 +1,7 @@
 import "./Navbar.css"
 import logo1 from "../../assets/workoutapplogo.png"
 // import logo2 from "./assets/workoutapplogo2.png"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
@@ -74,7 +74,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
+          <Link to="/">
           <img src={logo1} alt="Workout App Logo" className="logo" />
+        </Link>
         </div>
         <ul className="navbar-menu">
           <li className="navbar-item" ref={homeDropdownRef} onMouseEnter={handleHomeMouseEnter} onMouseLeave={handleHomeMouseLeave}>
