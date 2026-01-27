@@ -1,113 +1,174 @@
-/* BuildWorkout component styles - inherits from shared.css */
+/* BuildWorkout component styles */
 
-.build-workout-container {
+.build-workout {
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   min-height: calc(100vh - 160px);
 }
 
-.build-workout-container h1 {
+.workout-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.workout-header h1 {
   color: #2c3e50;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.workout-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.clear-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+.body-selector-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.body-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.body-view h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.body-svg {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.selected-muscles {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.selected-muscles h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.build-workout-container > p {
-  text-align: center;
-  color: #7f8c8d;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Body map container with interactive overlay - 933x827 dimensions */
-.body-map-container {
-  position: relative;
-  max-width: 933px;
-  width: 100%;
-  margin: 0 auto 2rem;
+.muscle-list {
   display: flex;
-  justify-content: center;
-  aspect-ratio: 933 / 827;
-}
-
-.body-map-image {
-  width: 100%;
-  height: auto;
-  max-width: 933px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: block;
-}
-
-.muscle-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.muscle-area {
-  pointer-events: all;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.muscle-area:hover {
-  filter: brightness(1.1);
-  transform: scale(1.02);
-}
-
-.workout-builder {
-  background: white;
-  border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.workout-builder h2 {
-  color: #34495e;
-  margin-bottom: 25px;
-  font-size: 2rem;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
-}
-
-.builder-section {
-  margin-bottom: 30px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #eee;
-}
-
-.builder-section:last-child {
-  border-bottom: none;
-}
-
-.builder-section h3 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-}
-
-.builder-section p {
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.goal-options, .duration-options, .level-options {
-  display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
 }
 
-.goal-btn, .duration-btn, .level-btn {
+.muscle-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.remove-muscle {
+  background: rgba(255,255,255,0.3);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.remove-muscle:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.workout-actions {
+  text-align: center;
+}
+
+.create-workout-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.create-workout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body-selector-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .body-svg {
+    width: 150px;
+    height: 300px;
+  }
+  
+  .build-workout {
+    padding: 1rem;
+  }
+  
+  .workout-header h1 {
+    font-size: 2rem;
+  }
+}
+}
   background: #3498db;
   color: white;
   border: none;
