@@ -76,10 +76,22 @@
   transition: all 0.2s ease;
 }
 
-.body-svg path:hover,
-.body-svg ellipse:hover {
+/* Only apply hover effects to clickable muscle elements */
+.body-svg path[style*="cursor: pointer"]:hover,
+.body-svg ellipse[style*="cursor: pointer"]:hover {
   filter: brightness(1.15) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
   transform: scale(1.03);
+}
+
+/* Ensure non-clickable body parts remain static */
+.body-svg path:not([style*="cursor: pointer"]),
+.body-svg ellipse:not([style*="cursor: pointer"]),
+.body-svg circle,
+.body-svg line,
+.body-svg rect {
+  pointer-events: none;
+  transform: none !important;
+  filter: none !important;
 }
 
 /* Anatomical details styling */
@@ -87,8 +99,18 @@
   opacity: 0.7;
 }
 
-.body-svg circle[fill="#D2B48C"] {
+.body-svg circle[fill="#D2B48C"],
+.body-svg circle[fill="url(#bodyGradient)"] {
   opacity: 0.8;
+  transform: none !important;
+}
+
+/* Keep spine and bone elements completely static */
+.body-svg line[stroke*="Gradient"],
+.body-svg circle[fill="#D2B48C"] {
+  pointer-events: none !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 .selected-muscles {
@@ -196,240 +218,5 @@
   .muscle-tag {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
-  }
-}
-}
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-
-.goal-btn:hover, .duration-btn:hover, .level-btn:hover {
-  background: #2980b9;
-  transform: translateY(-2px);
-}
-
-.goal-btn.active, .duration-btn.active, .level-btn.active {
-  background: #27ae60;
-}
-
-.equipment-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.equipment-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 10px;
-  border: 2px solid #e0e0e0;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.equipment-item:hover {
-  border-color: #3498db;
-  background: #f8f9fa;
-}
-
-.equipment-item input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #3498db;
-}
-
-.equipment-item span {
-  color: #2c3e50;
-  font-weight: 500;
-}
-
-.generate-section {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.generate-workout-btn {
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.generate-workout-btn:hover {
-  background: linear-gradient(135deg, #229954, #27ae60);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
-}
-
-.workout-preview {
-  background: white;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.workout-preview h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-size: 2rem;
-}
-
-.workout-preview > p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.workout-placeholder {
-  background: #f8f9fa;
-  border: 2px dashed #dee2e6;
-  border-radius: 8px;
-  padding: 40px;
-  text-align: center;
-}
-
-.workout-placeholder p {
-  color: #6c757d;
-  font-size: 1.1rem;
-  margin: 0;
-}
-
-/* Selected muscles section */
-.selected-muscles {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 933px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.selected-muscles h3 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-}
-
-.muscle-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.muscle-tag {
-  background-color: #007bff;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 15px;
-  font-size: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.muscle-tag button {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 0;
-  margin-left: 4px;
-  font-size: 14px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s;
-}
-
-.muscle-tag button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Available muscle groups */
-.available-muscles {
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
-}
-
-.available-muscles h4 {
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 16px;
-}
-
-.muscle-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.muscle-option-btn {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  color: #495057;
-  padding: 6px 12px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 12px;
-  transition: all 0.3s ease;
-}
-
-.muscle-option-btn:hover {
-  background-color: #e9ecef;
-  border-color: #adb5bd;
-}
-
-.muscle-option-btn.selected {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-.muscle-option-btn.selected:hover {
-  background-color: #0056b3;
-  border-color: #004085;
-}
-
-@media (max-width: 768px) {
-  .build-workout-container {
-    padding: 15px;
-  }
-  
-  .build-workout-container h1 {
-    font-size: 2rem;
-  }
-  
-  .workout-builder, .workout-preview {
-    padding: 20px;
-  }
-  
-  .goal-options, .duration-options, .level-options {
-    flex-direction: column;
-  }
-  
-  .goal-btn, .duration-btn, .level-btn {
-    width: 100%;
-  }
-  
-  .equipment-options {
-    grid-template-columns: 1fr;
   }
 }
