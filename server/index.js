@@ -11,8 +11,8 @@ import workoutRoutes from "./routes/workouts.js";
 import nutritionRoutes from "./routes/nutrition.js";
 
  
-// Load environment variables from .env file
-dotenv.config();
+// Load environment variables from .env file (in parent directory)
+dotenv.config({ path: '../.env' });
  
 // Create Express application instance
 const app = express();
