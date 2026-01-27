@@ -4,8 +4,12 @@ import dotenv from "dotenv"; // Load environment variables from .env file
 import mongoose from "mongoose"; // MongoDB object modeling library
 import cors from "cors"; // Enable Cross-Origin Resource Sharing
 import cookieParser from "cookie-parser"; // Parse cookies from HTTP requests
-import bcrypt from "bcryptjs"; // Hash and compare passwords securely
-import jwt from "jsonwebtoken"; // Create and verify JSON Web Tokens
+
+// Import routes
+import authRoutes from "./routes/auth.js";
+import workoutRoutes from "./routes/workouts.js";
+import nutritionRoutes from "./routes/nutrition.js";
+
  
 // Load environment variables from .env file
 dotenv.config();
@@ -19,8 +23,7 @@ const FRONTEND_ORIGINS = [
   process.env.FRONTEND_ORIGIN || "http://localhost:5173",
   "http://localhost:5174", // Additional port for development
 ];
-// JWT secret key for signing tokens
-const JWT_SECRET = process.env.JWT_SECRET || "replace_me";
+
  
 // Configure middleware
 app.use(express.json()); // Parse JSON request bodies
@@ -42,13 +45,68 @@ app.use(cors({
   credentials: true // Allow cookies to be sent with requests
 }));
 
+// ROUTES
+
+// Health check endpoint
+app.get("/", (req, res) => {
+  res.json({ 
+    message: "🏋️ AdaptFit Workout App API", 
+    status: "running",
+    timestamp: new Date().toISOString() 
+  });
+});
+
+// API routes
+app.use("/api/auth", authRoutes);
+app.use("/api/workouts", workoutRoutes);
+app.use("/api/nutrition", nutritionRoutes);
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error("Global error:", err);
+  res.status(500).json({ 
+    message: "Something went wrong!",
+    error: process.env.NODE_ENV === 'development' ? err.message : undefined
+  });
+});
+
 // SERVER STARTUP AND DATABASE CONNECTION
 
 // Connect to MongoDB database and start the server
-mongoose.connect(process.env.MONGO_URI).then(async () => {
-  console.log("✅ MongoDB ansluten"); // MongoDB connected
-  
-  // Start the Express server on all network interfaces (0.0.0.0)
-  app.listen(PORT, "0.0.0.0", () => console.log(`🚀 Server på http://localhost:${PORT}`));
+mongoose.connect(process.env.MONGO_URI)
+  .then(async () => {
+    console.log("✅ MongoDB connected successfully");
+    
+    // Start the Express server on all network interfaces (0.0.0.0)
+    const server = app.listen(PORT, "0.0.0.0", () => {
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(`📚 API endpoints available at http://localhost:${PORT}/api`);
+    });
+
+    // Graceful shutdown
+    process.on('SIGTERM', () => {
+      console.log('SIGTERM received, shutting down gracefully');
+      server.close(() => {
+        mongoose.connection.close();
+        console.log('Process terminated');
+      });
+    });
+  })
+  .catch((error) => {
+    console.error("❌ MongoDB connection failed:", error.message);
+    console.error("Please check your MONGO_URI in .env file");
+    process.exit(1);
+  });
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+  process.exit(1);
+});
+
+// Handle unhandled promise rejections
+process.on('unhandledRejection', (error) => {
+  console.error('Unhandled Rejection:', error);
+  process.exit(1);
 });
  
