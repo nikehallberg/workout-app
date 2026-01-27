@@ -64,9 +64,21 @@
 .body-svg {
   border: 2px solid #ddd;
   border-radius: 12px;
-  padding: 10px;
+  padding: 15px;
   background: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 250px;
+}
+
+.body-svg path,
+.body-svg ellipse {
+  transition: all 0.2s ease;
+}
+
+.body-svg path:hover,
+.body-svg ellipse:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
 }
 
 .selected-muscles {
@@ -156,8 +168,7 @@
   }
   
   .body-svg {
-    width: 150px;
-    height: 300px;
+    max-width: 180px;
   }
   
   .build-workout {
@@ -166,6 +177,15 @@
   
   .workout-header h1 {
     font-size: 2rem;
+  }
+  
+  .muscle-list {
+    gap: 0.5rem;
+  }
+  
+  .muscle-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 }
