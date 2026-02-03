@@ -67,7 +67,7 @@ const BuildWorkout = () => {
         {/* Front View */}
         <div className="body-view">
           <h3>Front View</h3>
-          <svg width="220" height="450" viewBox="0 0 220 450" className="body-svg">
+          <svg width="350" height="700" viewBox="0 0 220 450" className="body-svg">
             {/* Define gradients for muscle depth */}
             <defs>
               <radialGradient id="muscleGradient" cx="30%" cy="30%">
@@ -205,7 +205,7 @@ const BuildWorkout = () => {
         {/* Back View */}
         <div className="body-view">
           <h3>Back View</h3>
-          <svg width="220" height="450" viewBox="0 0 220 450" className="body-svg">
+          <svg width="350" height="700" viewBox="0 0 220 450" className="body-svg">
             <defs>
               <radialGradient id="backMuscleGradient" cx="30%" cy="30%">
                 <stop offset="0%" stopColor="currentColor" stopOpacity="1"/>

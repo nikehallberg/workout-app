@@ -67,7 +67,7 @@
   padding: 15px;
   background: linear-gradient(145deg, #f8f9fa, #e9ecef);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  max-width: 250px;
+  max-width: 400px;
 }
 
 .body-svg path,
@@ -200,7 +200,7 @@
   }
   
   .body-svg {
-    max-width: 180px;
+    max-width: 280px;
   }
   
   .build-workout {
