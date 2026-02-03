@@ -46,11 +46,13 @@ const BuildWorkout = () => {
   };
 
   const getMuscleStyle = (muscleId) => ({
-    fill: selectedMuscles.has(muscleId) ? muscleGroups[muscleId].color : '#E8E8E8',
-    stroke: selectedMuscles.has(muscleId) ? '#333' : '#CCC',
-    strokeWidth: selectedMuscles.has(muscleId) ? 3 : 1,
+    fill: selectedMuscles.has(muscleId) ? muscleGroups[muscleId].color : '#F0F0F0',
+    stroke: selectedMuscles.has(muscleId) ? '#2C3E50' : '#D0D0D0',
+    strokeWidth: selectedMuscles.has(muscleId) ? 2.5 : 1.5,
     cursor: 'pointer',
-    transition: 'all 0.3s ease'
+    transition: 'all 0.3s ease',
+    filter: selectedMuscles.has(muscleId) ? 'url(#muscleShadow) brightness(1.1)' : 'none',
+    opacity: selectedMuscles.has(muscleId) ? 1 : 0.85
   });
 
   return (
@@ -68,23 +70,41 @@ const BuildWorkout = () => {
         <div className="body-view">
           <h3>Front View</h3>
           <svg width="350" height="700" viewBox="0 0 220 450" className="body-svg">
-            {/* Define gradients for muscle depth */}
+            {/* Define enhanced gradients for muscle depth and body realism */}
             <defs>
               <radialGradient id="muscleGradient" cx="30%" cy="30%">
                 <stop offset="0%" stopColor="currentColor" stopOpacity="1"/>
-                <stop offset="100%" stopColor="currentColor" stopOpacity="0.7"/>
+                <stop offset="70%" stopColor="currentColor" stopOpacity="0.8"/>
+                <stop offset="100%" stopColor="currentColor" stopOpacity="0.6"/>
               </radialGradient>
-              <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#F4D2A7" stopOpacity="0.8"/>
-                <stop offset="50%" stopColor="#FDB462" stopOpacity="1"/>
-                <stop offset="100%" stopColor="#E6A87A" stopOpacity="0.9"/>
+              <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#F5D5AE" stopOpacity="0.9"/>
+                <stop offset="30%" stopColor="#EFBF9D" stopOpacity="1"/>
+                <stop offset="70%" stopColor="#E8A87C" stopOpacity="1"/>
+                <stop offset="100%" stopColor="#D4956B" stopOpacity="0.9"/>
+              </linearGradient>
+              <radialGradient id="muscleHighlight" cx="20%" cy="20%">
+                <stop offset="0%" stopColor="rgba(255,255,255,0.3)" stopOpacity="1"/>
+                <stop offset="100%" stopColor="rgba(255,255,255,0)" stopOpacity="0"/>
+              </radialGradient>
+              <filter id="muscleShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="1" dy="1" stdDeviation="2" floodColor="#000" floodOpacity="0.2"/>
+              </filter>
+              <linearGradient id="spineShine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#E6C2A6" stopOpacity="0.8"/>
+                <stop offset="50%" stopColor="#F0D4B3" stopOpacity="1"/>
+                <stop offset="100%" stopColor="#DDB896" stopOpacity="0.8"/>
               </linearGradient>
             </defs>
-            {/* Head with realistic shaping */}
-            <ellipse cx="110" cy="35" rx="28" ry="30" fill="url(#bodyGradient)" stroke="#B8860B" strokeWidth="1.5"/>
-            <circle cx="105" cy="32" r="2" fill="#333"/>
-            <circle cx="115" cy="32" r="2" fill="#333"/>
-            <path d="M 105 42 Q 110 45 115 42" stroke="#333" strokeWidth="1" fill="none"/>
+            {/* Head with enhanced realistic shaping and subtle features */}
+            <ellipse cx="110" cy="35" rx="28" ry="30" fill="url(#bodyGradient)" stroke="#C8956D" strokeWidth="1.5" filter="url(#muscleShadow)"/>
+            <ellipse cx="110" cy="32" rx="15" ry="18" fill="url(#muscleHighlight)" opacity="0.4"/>
+            <circle cx="105" cy="32" r="2.5" fill="#2C3E50" opacity="0.8"/>
+            <circle cx="115" cy="32" r="2.5" fill="#2C3E50" opacity="0.8"/>
+            <circle cx="104" cy="31" r="0.8" fill="#FFF" opacity="0.6"/>
+            <circle cx="114" cy="31" r="0.8" fill="#FFF" opacity="0.6"/>
+            <path d="M 105 42 Q 110 45 115 42" stroke="#8B4513" strokeWidth="1.2" fill="none" opacity="0.7"/>
+            <path d="M 107 39 L 113 39" stroke="#8B4513" strokeWidth="0.8" fill="none" opacity="0.5"/>
             
             {/* Neck with anatomical curve */}
             <path d="M 98 60 Q 110 58 122 60 Q 120 75 118 78 Q 110 80 102 78 Q 100 75 98 60 Z" 
