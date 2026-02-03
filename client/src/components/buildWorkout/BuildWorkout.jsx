@@ -347,7 +347,7 @@ const BuildWorkout = () => {
                 onClick={() => toggleMuscle(muscleId)}
                 className="remove-muscle"
               >
-                ×
+                ×n
               </button>
             </div>
           ))}

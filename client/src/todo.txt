@@ -1,3 +1,4 @@
 router routes 
 react hooks
 api eventuellt
+server node js server
