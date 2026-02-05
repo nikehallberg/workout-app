@@ -78,6 +78,12 @@ const Navbar = () => {
           <img src={logo1} alt="Workout App Logo" className="logo" />
         </Link>
         </div>
+        <button>
+          Login
+        </button>
+        <button>
+          Register
+        </button>
         <ul className="navbar-menu">
           <li className="navbar-item" ref={homeDropdownRef} onMouseEnter={handleHomeMouseEnter} onMouseLeave={handleHomeMouseLeave}>
             <Link to="/" className="navbar-link">
