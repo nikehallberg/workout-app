@@ -1,0 +1,8 @@
+# Add supabase types to client dependencies
+npm install @supabase/supabase-js
+
+# For type generation (run this after setting up your database)
+npx supabase gen types typescript --project-id YOUR_PROJECT_REF --schema public > supabase/types/database.types.ts
+
+# Alternative local type generation (if running supabase locally)
+npx supabase gen types typescript --local --schema public > supabase/types/database.types.ts
