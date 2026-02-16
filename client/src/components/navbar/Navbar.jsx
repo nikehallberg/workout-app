@@ -8,9 +8,12 @@ const Navbar = () => {
   const [showWorkoutNav, setShowWorkoutNav] = useState(false)
   const [showNutritionNav, setShowNutritionNav] = useState(false)
   const [showHomeNav, setShowHomeNav] = useState(false)
+  const [showAuthPopup, setShowAuthPopup] = useState(false)
+  const [authMode, setAuthMode] = useState('login')
   const dropdownRef = useRef(null)
   const nutritionDropdownRef = useRef(null)
   const homeDropdownRef = useRef(null)
+  const authPopupRef = useRef(null)
 
   // click dropdown
   // const toggleWorkoutNav = () => {
@@ -56,6 +59,20 @@ const Navbar = () => {
     setShowHomeNav(false);
   };
 
+  // Auth popup handlers
+  const openAuthPopup = (mode) => {
+    setAuthMode(mode)
+    setShowAuthPopup(true)
+  }
+
+  const closeAuthPopup = () => {
+    setShowAuthPopup(false)
+  }
+
+  const switchAuthMode = () => {
+    setAuthMode(authMode === 'login' ? 'register' : 'login')
+  }
+
   // click dropdown extra logic
   // useEffect(() => {
   //   function handleClickOutside(event) {
@@ -78,12 +95,14 @@ const Navbar = () => {
           <img src={logo1} alt="Workout App Logo" className="logo" />
         </Link>
         </div>
-        <button>
-          Login
-        </button>
-        <button>
-          Register
-        </button>
+        <div className="auth-buttons">
+          <button className="auth-btn" onClick={() => openAuthPopup('login')}>
+            Login
+          </button>
+          <button className="auth-btn" onClick={() => openAuthPopup('register')}>
+            Register
+          </button>
+        </div>
         <ul className="navbar-menu">
           <li className="navbar-item" ref={homeDropdownRef} onMouseEnter={handleHomeMouseEnter} onMouseLeave={handleHomeMouseLeave}>
             <Link to="/" className="navbar-link">
@@ -193,6 +212,61 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Auth Popup Modal */}
+      {showAuthPopup && (
+        <div className="auth-popup-overlay" onClick={closeAuthPopup}>
+          <div className="auth-popup" ref={authPopupRef} onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={closeAuthPopup}>&times;</button>
+            <div className="auth-popup-content">
+              <h2>{authMode === 'login' ? 'Login' : 'Register'}</h2>
+              
+              {authMode === 'login' ? (
+                <form className="auth-form">
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" id="password" name="password" required />
+                  </div>
+                  <button type="submit" className="submit-btn">Login</button>
+                </form>
+              ) : (
+                <form className="auth-form">
+                  <div className="form-group">
+                    <label htmlFor="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" id="password" name="password" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required />
+                  </div>
+                  <button type="submit" className="submit-btn">Register</button>
+                </form>
+              )}
+              
+              <div className="auth-switch">
+                <p>
+                  {authMode === 'login' ? "Don't have an account?" : "Already have an account?"}
+                  <button type="button" className="switch-btn" onClick={switchAuthMode}>
+                    {authMode === 'login' ? 'Register' : 'Login'}
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

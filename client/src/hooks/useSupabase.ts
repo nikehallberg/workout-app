@@ -2,6 +2,22 @@ import { useState, useEffect } from 'react'
 import type { User } from '@supabase/supabase-js'
 import { supabase, auth } from '../lib/supabase'
 
+// Simple connection test function
+export const testSupabaseConnection = async () => {
+  try {
+    const { data, error } = await supabase.auth.getSession()
+    if (error) {
+      console.error('❌ Supabase connection failed:', error.message)
+      return { success: false, error }
+    }
+    console.log('✅ Supabase connection successful!')
+    return { success: true, error: null }
+  } catch (err) {
+    console.error('❌ Supabase connection failed:', err)
+    return { success: false, error: err }
+  }
+}
+
 // Hook to manage authentication state
 export const useAuth = () => {
   const [user, setUser] = useState<User | null>(null)

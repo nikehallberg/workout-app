@@ -18,10 +18,24 @@ import SpecificNeeds from './components/specificNeeds/SpecificNeeds'
 import './App.css'
 import './components/sharedLogic/shared.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect } from 'react'
+import { testSupabaseConnection } from './hooks/useSupabase'
 
 
 
 function App() {
+  // Test Supabase connection when app starts (remove this after testing)
+  useEffect(() => {
+    console.log('🔍 Testing Supabase connection...')
+    testSupabaseConnection().then(result => {
+      if (result.success) {
+        console.log('🎉 Supabase is working properly!')
+      } else {
+        console.log('💥 Supabase connection issue:', result.error)
+      }
+    })
+  }, [])
+
   return (
     <Router>
       <div>
