@@ -1,0 +1,11 @@
+ Start the dev server (what we just did)
+npm run client
+
+ Build for production
+cd client && npm run build
+
+ Optional: Run Supabase locally 
+npm run db:start
+
+ Push database changes
+npm run db:migrate
