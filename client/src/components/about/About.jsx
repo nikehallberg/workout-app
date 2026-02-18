@@ -4,18 +4,18 @@ const About = () => {
   return (
     <div className="about-container">
       <h1>About FitTracker</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>FitTracker is your comprehensive fitness companion, designed to help you achieve your health and wellness goals through personalized workout plans, nutrition guidance, and progress tracking tools.</p>
       
       <section className="mission">
         <h2>Our Mission</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        <p>We believe fitness should be accessible, enjoyable, and sustainable for everyone. Our mission is to provide the tools, guidance, and motivation needed to make healthy living a permanent part of your lifestyle, regardless of your starting point or fitness level.</p>
       </section>
       
       <section className="team">
         <h2>Our Team</h2>
-        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Our team consists of certified personal trainers, registered dietitians, and fitness technology experts who are passionate about helping you succeed. We combine years of experience with the latest research to provide evidence-based guidance.</p>
         
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p>Every feature is designed with your success in mind, backed by experts who understand the challenges of building and maintaining healthy habits. We're here to support you every step of your fitness journey.</p>
       </section>
     </div>
   )

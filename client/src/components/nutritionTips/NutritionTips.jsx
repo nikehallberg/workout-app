@@ -4,32 +4,32 @@ const NutritionTips = () => {
   return (
     <div className="nutrition-tips-container">
       <h1>Nutrition Tips</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Fuel your fitness goals with expert nutrition guidance. Learn evidence-based strategies for optimal performance, recovery, and body composition changes that complement your training program.</p>
       
       <section className="daily-tips">
         <h2>Daily Nutrition Tips</h2>
         
         <div className="tip">
           <h3>Stay Hydrated</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Drink half your body weight in ounces of water daily, plus extra during workouts. Proper hydration improves performance, aids recovery, supports metabolism, and helps regulate appetite throughout the day.</p>
         </div>
         
         <div className="tip">
           <h3>Eat the Rainbow</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <p>Include colorful fruits and vegetables in every meal to ensure a wide variety of vitamins, minerals, and antioxidants. Different colors provide different nutrients that support immune function, reduce inflammation, and optimize recovery.</p>
         </div>
         
         <div className="tip">
           <h3>Portion Control</h3>
-          <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+          <p>Use the plate method: fill half your plate with vegetables, one quarter with lean protein, and one quarter with whole grains. This simple visual guide helps maintain appropriate portion sizes for sustainable weight management.</p>
         </div>
       </section>
       
       <section className="meal-timing">
         <h2>Meal Timing Strategies</h2>
-        <p>Aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <p>Time your nutrition around your workouts for optimal performance and recovery. Eat a balanced meal 2-3 hours before training, or a light snack 30-60 minutes prior. Post-workout, consume protein and carbs within 30 minutes for best results.</p>
         
-        <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+        <p>Consider intermittent fasting or meal frequency strategies that fit your lifestyle and goals. Whether you prefer three large meals or six smaller ones, consistency and total daily nutrition matter more than specific timing for most fitness goals.</p>
       </section>
     </div>
   )

@@ -4,33 +4,33 @@ const MealPlans = () => {
   return (
     <div className="meal-plans-container">
       <h1>Meal Plans</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Discover structured meal plans designed to support your specific fitness goals. Whether you're looking to lose weight, gain muscle, or maintain your current physique, find the perfect eating strategy for success.</p>
       
       <section className="weekly-plans">
         <h2>Weekly Meal Plans</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Complete 7-day meal plans with shopping lists, prep instructions, and nutritional breakdowns. Each plan is designed by nutrition experts to align with specific fitness objectives and dietary preferences.</p>
         
         <div className="plan">
           <h3>Weight Loss Plan</h3>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Calorie-controlled meals featuring lean proteins, fiber-rich vegetables, and complex carbohydrates. Designed to create a sustainable calorie deficit while maintaining muscle mass and energy levels for your workouts.</p>
         </div>
         
         <div className="plan">
           <h3>Muscle Gain Plan</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+          <p>High-protein, nutrient-dense meals to support muscle growth and recovery. Includes strategic carbohydrate timing around workouts and adequate calories to fuel intense training sessions and muscle development.</p>
         </div>
         
         <div className="plan">
           <h3>Maintenance Plan</h3>
-          <p>Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+          <p>Balanced nutrition for sustaining your current weight and fitness level. Focuses on whole foods, optimal macro ratios, and meal variety to maintain long-term healthy eating habits and consistent energy.</p>
         </div>
       </section>
       
       <section className="meal-prep">
         <h2>Meal Prep Tips</h2>
-        <p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <p>Master the art of meal preparation to save time, money, and stay consistent with your nutrition goals. Learn efficient cooking techniques, proper food storage, and weekly prep strategies for success.</p>
         
-        <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        <p>Batch cook proteins, prepare vegetables in advance, and portion meals for the week. Use proper containers, label with dates, and rotate ingredients to maintain variety while staying organized and committed to your plan.</p>
       </section>
     </div>
   )

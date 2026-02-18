@@ -3,30 +3,30 @@ const Workouts = () => {
   return (
     <div className="workouts-container">
       <h1>Your Workouts</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Access your personal workout history, track your progress, and plan upcoming training sessions. Everything you need to stay consistent and motivated on your fitness journey.</p>
       
       <section className="workout-categories">
         <h2>Workout Categories</h2>
         
         <div className="category">
           <h3>Strength Training</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Build muscle and increase power with resistance exercises including free weights, machines, and bodyweight movements. Track your lifts, sets, and progressive overload for optimal strength development.</p>
         </div>
         
         <div className="category">
           <h3>Cardio</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p>Improve cardiovascular health and endurance through running, cycling, swimming, and HIIT workouts. Monitor your heart rate, distance, and calories burned to optimize your cardio training.</p>
         </div>
         
         <div className="category">
           <h3>Flexibility & Stretching</h3>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Maintain mobility and prevent injury with dedicated stretching routines and yoga flows. Essential for recovery and maintaining range of motion across all your training activities.</p>
         </div>
       </section>
       
       <section className="recent-workouts">
         <h2>Recent Workouts</h2>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Review your last training sessions, check completed exercises, and analyze your performance trends. Use this data to adjust your program and celebrate your consistency and progress.</p>
       </section>
     </div>
   )

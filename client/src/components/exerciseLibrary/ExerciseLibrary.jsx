@@ -3,29 +3,29 @@ const ExerciseLibrary = () => {
   return (
     <div className="exercise-library-container">
       <h1>Exercise Library</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Explore our comprehensive database of exercises with detailed instructions, form cues, and video demonstrations. Find the perfect movements for every muscle group and skill level.</p>
       
       <section className="exercise-categories">
         <h2>Exercise Categories</h2>
         
         <div className="category">
           <h3>Upper Body</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Strengthen your chest, shoulders, arms, and back with exercises ranging from push-ups and pull-ups to bench press and rows. Build functional upper body strength for daily activities and athletic performance.</p>
         </div>
         
         <div className="category">
           <h3>Lower Body</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p>Develop powerful legs and glutes with squats, lunges, deadlifts, and plyometric movements. Essential exercises for building a strong foundation and improving athletic performance across all activities.</p>
         </div>
         
         <div className="category">
           <h3>Core & Abs</h3>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Build a strong, stable core with planks, crunches, and rotational movements. Core strength improves posture, reduces back pain, and enhances performance in all other exercises and daily activities.</p>
         </div>
         
         <div className="category">
           <h3>Full Body</h3>
-          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          <p>Efficient compound movements that work multiple muscle groups simultaneously. Perfect for time-effective workouts and building functional strength that transfers to real-world movements and activities.</p>
         </div>
       </section>
       
@@ -34,23 +34,23 @@ const ExerciseLibrary = () => {
         
         <div className="category">
           <h3>Dumbbell Exercises</h3>
-          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          <p>Versatile dumbbell movements for strength, muscle building, and functional fitness. Perfect for home gyms or adding variety to your routine with unilateral training and stabilization challenges.</p>
         </div>
         
         <div className="category">
           <h3>Barbell Exercises</h3>
-          <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+          <p>Master the big lifts including squats, deadlifts, bench press, and rows. Barbell exercises allow for heavy loading and are essential for building maximal strength and muscle mass.</p>
         </div>
         
         <div className="category">
           <h3>Bodyweight Exercises</h3>
-          <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+          <p>Effective exercises requiring no equipment that can be done anywhere. Build strength, endurance, and mobility using your own body weight as resistance for convenient, effective workouts.</p>
         </div>
       </section>
       
       <section className="exercise-search">
         <h2>Search & Filter</h2>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+        <p>Quickly find exercises by muscle group, equipment type, difficulty level, or movement pattern. Advanced filtering options help you discover new exercises and build custom workout routines tailored to your needs.</p>
       </section>
     </div>
   )

@@ -4,33 +4,33 @@ const Nutrition = () => {
   return (
     <div className="nutrition-container">
       <h1>Nutrition Guide</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Master the fundamentals of nutrition to fuel your workouts and optimize your results. Learn how proper nutrition supports your fitness goals and overall health through evidence-based guidance.</p>
       
       <section className="macronutrients">
         <h2>Understanding Macronutrients</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Learn how proteins, carbohydrates, and fats work together to fuel your body and support your fitness goals. Proper macronutrient balance is essential for energy, recovery, and body composition changes.</p>
         
         <div className="macro">
           <h3>Proteins</h3>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          <p>Essential for muscle repair and growth. Aim for 0.8-1.2g per pound of body weight daily from sources like lean meats, fish, eggs, dairy, legumes, and protein supplements to support recovery and muscle development.</p>
         </div>
         
         <div className="macro">
           <h3>Carbohydrates</h3>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p>Your body's preferred energy source for workouts and brain function. Choose complex carbs like oats, rice, and sweet potatoes for sustained energy, and simple carbs around workouts for quick fuel.</p>
         </div>
         
         <div className="macro">
           <h3>Fats</h3>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Important for hormone production and vitamin absorption. Include healthy fats from nuts, avocados, olive oil, and fatty fish. Aim for 20-35% of total calories from quality fat sources.</p>
         </div>
       </section>
       
       <section className="healthy-eating">
         <h2>Healthy Eating Principles</h2>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Build sustainable eating habits that support your fitness goals and long-term health. Focus on whole foods, proper portions, and consistent meal timing to optimize your nutrition and energy levels.</p>
         
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p>Emphasize nutrient-dense foods like vegetables, fruits, lean proteins, and whole grains. Stay hydrated, plan your meals ahead, and allow flexibility for social occasions while maintaining your overall nutrition goals.</p>
       </section>
     </div>
   )

@@ -5,45 +5,45 @@ const YogaFlexibility = () => {
   return (
     <div className="yoga-flexibility-container">
       <h1>Yoga & Flexibility</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Enhance your mobility, reduce stress, and improve overall well-being with our comprehensive yoga and flexibility programs. Perfect for all levels, from gentle beginner flows to advanced poses and deep stretching routines.</p>
       
       <section className="yoga-styles">
         <h2>Yoga Styles</h2>
         
         <div className="category">
           <h3>Hatha Yoga</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Focus on foundational poses with longer holds to build strength, balance, and alignment. Perfect for beginners, Hatha yoga emphasizes proper form and breathing techniques while developing body awareness and mindfulness.</p>
         </div>
         
         <div className="category">
           <h3>Vinyasa Flow</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p>Experience dynamic, flowing sequences that synchronize movement with breath. Vinyasa builds cardiovascular endurance while improving flexibility and strength through smooth transitions between poses.</p>
         </div>
         
         <div className="category">
           <h3>Restorative Yoga</h3>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Deeply relaxing practice using props to support passive poses held for extended periods. Ideal for stress relief, recovery, and promoting better sleep while gently opening tight muscles and joints.</p>
         </div>
       </section>
       
       <section className="flexibility-training">
         <h2>Flexibility Training</h2>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Dedicated stretching routines to improve range of motion, prevent injury, and enhance athletic performance. Essential for maintaining mobility and counteracting the effects of sitting and exercise-induced tightness.</p>
         
         <div className="category">
           <h3>Static Stretching</h3>
-          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          <p>Hold stretches for 15-60 seconds to gradually lengthen muscles and improve flexibility. Best performed after workouts when muscles are warm, static stretching helps reduce tension and improve recovery.</p>
         </div>
         
         <div className="category">
           <h3>Dynamic Stretching</h3>
-          <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+          <p>Active movements that take joints through their full range of motion. Perfect for warm-ups, dynamic stretching prepares muscles for exercise while improving mobility and movement patterns.</p>
         </div>
       </section>
       
       <section className="mindfulness">
         <h2>Mindfulness & Meditation</h2>
-        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+        <p>Cultivate mental clarity and emotional balance through guided meditation and mindfulness practices. Learn breathing techniques, body awareness, and stress management tools that complement your physical training.</p>
       </section>
     </div>
   )

@@ -3,30 +3,30 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <h1>Your Profile</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Manage your personal fitness information, track your stats, and customize your training preferences. Keep your profile updated to get the most personalized workout and nutrition recommendations.</p>
       
       <section className="personal-info">
         <h2>Personal Information</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Update your basic information including age, height, weight, and activity level to ensure accurate calorie calculations and personalized workout recommendations.</p>
         
         <div className="stats">
           <h3>Your Stats</h3>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Current measurements and fitness metrics including BMI, body fat percentage, and fitness level assessments to track your overall health and progress over time.</p>
         </div>
       </section>
       
       <section className="fitness-goals">
         <h2>Fitness Goals</h2>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+        <p>Set and track your fitness objectives whether it's weight loss, muscle gain, improved endurance, or overall health. Clear goals help maintain motivation and guide your training decisions.</p>
         
-        <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p>Choose specific, measurable targets with realistic timelines. Break down larger goals into smaller milestones to celebrate progress and maintain momentum throughout your fitness journey.</p>
       </section>
       
       <section className="achievements">
         <h2>Achievements</h2>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Celebrate your fitness milestones and earned badges. From consistency streaks to personal records, track all your accomplishments and share your success with the community.</p>
         
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p>Unlock special achievements for reaching goals, maintaining workout streaks, trying new activities, and hitting personal bests. These rewards help maintain motivation and recognize your dedication.</p>
       </section>
     </div>
   )

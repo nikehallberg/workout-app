@@ -3,24 +3,24 @@ const ProgressTracker = () => {
   return (
     <div className="progress-tracker-container">
       <h1>Progress Tracker</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Track your fitness journey with comprehensive monitoring tools. Monitor your improvements across multiple metrics including weight loss, strength gains, and endurance milestones to stay motivated and achieve your goals.</p>
       
       <section className="tracking-metrics">
         <h2>Tracking Metrics</h2>
         
         <div className="category">
           <h3>Weight & Body Composition</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Monitor your weight changes, body fat percentage, muscle mass, and BMI over time. Track measurements like waist, chest, arms, and thighs to get a complete picture of your body transformation progress.</p>
         </div>
         
         <div className="category">
           <h3>Strength Gains</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <p>Record your personal records in key lifts like bench press, squat, deadlift, and overhead press. Track your one-rep max improvements and monitor how your working weights increase over time across all exercises.</p>
         </div>
         
         <div className="category">
           <h3>Endurance Improvements</h3>
-          <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+          <p>Track your cardiovascular progress through running times, cycling distances, swimming laps, and heart rate recovery. Monitor improvements in stamina, VO2 max, and overall aerobic capacity.</p>
         </div>
       </section>
       
@@ -29,20 +29,20 @@ const ProgressTracker = () => {
         
         <div className="category">
           <h3>Charts & Graphs</h3>
-          <p>Aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+          <p>Visualize your progress with interactive charts showing weight trends, strength progression curves, and performance analytics. Easy-to-read graphs help you identify patterns and celebrate your achievements over time.</p>
         </div>
         
         <div className="category">
           <h3>Photo Progress</h3>
-          <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+          <p>Document your transformation with progress photos. Take front, side, and back photos at regular intervals to visually track muscle development, fat loss, and overall physique changes that numbers alone can't capture.</p>
         </div>
       </section>
       
       <section className="goal-setting">
         <h2>Goal Setting & Achievements</h2>
-        <p>Nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+        <p>Set SMART fitness goals and track your journey towards achieving them. Whether it's losing 20 pounds, running a 5K, or bench pressing your body weight, break down big goals into manageable milestones and celebrate each victory.</p>
         
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+        <p>Unlock achievement badges as you hit new personal records and consistency milestones. Share your accomplishments with friends and stay motivated by seeing how far you've come since starting your fitness journey.</p>
       </section>
     </div>
   )

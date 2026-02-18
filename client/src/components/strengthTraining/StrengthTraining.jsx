@@ -5,32 +5,32 @@ const StrengthTraining = () => {
   return (
     <div className="strength-training-container">
       <h1>Strength Training</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Build muscle, increase bone density, and boost metabolism with our comprehensive strength training programs. From free weights to machines to bodyweight exercises, discover the best methods to get stronger and more powerful.</p>
       
       <section className="training-types">
         <h2>Types of Strength Training</h2>
         
         <div className="category">
           <h3>Free Weights</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Master the fundamentals with dumbbells, barbells, and kettlebells. Free weight training engages stabilizing muscles, improves functional strength, and allows for natural movement patterns that translate to real-world activities.</p>
         </div>
         
         <div className="category">
           <h3>Machine Training</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p>Perfect for beginners and isolation work, machines provide controlled movement patterns and built-in safety features. Ideal for targeting specific muscle groups and achieving consistent form while building confidence in the gym.</p>
         </div>
         
         <div className="category">
           <h3>Bodyweight Exercises</h3>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Train anywhere, anytime with no equipment required. Bodyweight exercises like push-ups, pull-ups, squats, and planks build functional strength while improving mobility, balance, and coordination throughout your daily life.</p>
         </div>
       </section>
       
       <section className="workout-programs">
         <h2>Strength Training Programs</h2>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Follow proven programming methods like 5x5, pyramid sets, and periodization to maximize your strength gains. Our structured programs ensure progressive overload while allowing adequate recovery time for optimal muscle development.</p>
         
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p>Whether your goal is powerlifting, bodybuilding, or general fitness, we have specialized strength programs designed to help you reach new personal records safely and efficiently through systematic progression.</p>
       </section>
     </div>
   )
